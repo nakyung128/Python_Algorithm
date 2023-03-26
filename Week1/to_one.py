@@ -1,3 +1,4 @@
+### 1이 될 때까지
 # n과 k 입력받기
 n, k = map(int, input().split())
 result = 0
