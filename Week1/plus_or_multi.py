@@ -4,13 +4,13 @@
 # 따라서 두 수에 대해 연산을 수행할 때, 두 수 중에서 하나라도 1 이하인 경우에는 더하며, 두 수가 모두 2 이상인 경우에는 곱하기
 
 number = input()
-result = int(number[0])
+result = int(number[0]) # 첫 번째 숫자 먼저 담아놓기
 
-for i in range(1, len(number)):
+for i in range(1, len(number)): # 두 번째부터 반복문 돌리기
     num = int(number[i])
-    if (result <= 1 or num <= 1):
+    if (result <= 1 or num <= 1): # 첫 번째 숫자 or 두 번째 숫자가 1 이하인 경우에는 더하기
         result += num
-    else:
+    else: # 아니면 곱하기
         result *= num
 
 print(result)

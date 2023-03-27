@@ -5,12 +5,6 @@ result = 0 # 횟수
 
 # 반복하기
 while True:
-    if n < k: # n이 k보다 작은 경우 (나눌 수 없는)
-        while n > 1: # 1이 될 때까지 1을 빼 준다.
-            result += 1
-            n -= 1
-        print(result) # 1이 되면 출력 후 반복문 탈출
-        break
     if n == 1: # n이 1이 된 경우
         print(result) # 출력 후 반복문 탈출
         break
