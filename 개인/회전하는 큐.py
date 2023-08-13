@@ -16,15 +16,8 @@ while i < m:
         i += 1
         continue
     else:
-        where = 0
-        # 뽑아내려고 하는 수의 현재 위치 탐색
-        for q in queue:
-            if q == locations[i]:
-                break
-            else:
-                where += 1
         # 현재 위치가 큐의 길이//2보다 작거나 같으면 앞으로 옮겨주는 게 빠르다
-        if where <= len(queue)//2:
+        if queue.index(locations[i]) <= len(queue)//2:
             # 왼쪽으로 한 칸 이동 (2번)
             queue.append(queue.popleft())
             count += 1           
