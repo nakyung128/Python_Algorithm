@@ -9,6 +9,7 @@ visited = [0 for _ in range(n+1)]
 answer = [0 for _ in range(n+1)]
 cnt = 1
 
+# 양방향으로 저장
 for _ in range(m):
     u, v = map(int, sys.stdin.readline().split())
     graph[u].append(v)
