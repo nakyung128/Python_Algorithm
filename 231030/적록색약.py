@@ -12,7 +12,7 @@ dy = [0, 0, -1, 1]
 color_blind = 0
 no_color_blind = 0
 
-# 구역 개수 세기
+# 구역 개수 세기 dfs 함수
 def dfs(x, y):
     visited[x][y] = 1 # 방문
     color = colors[x][y] # 지금 색상
@@ -25,14 +25,14 @@ def dfs(x, y):
                 if colors[nx][ny] == color:
                     dfs(nx, ny)
 
+# 적록색약이 아닌 사람이 봤을 때의 구역 개수 세기
 for i in range(N):
     for j in range(N):
         if visited[i][j] == 0:
             dfs(i, j)
             no_color_blind += 1
 
-# 적록색약인 사람이 봤을 때 구역 개수
-# 초 -> 빨로 바꿔주기
+# 적록색약: 초록 -> 빨강으로 바꿔주기
 for i in range(N):
     for j in range(N):
         if colors[i][j] == "G":
@@ -41,7 +41,7 @@ for i in range(N):
 # visited 초기화
 visited = [ [0]*N for _ in range(N) ]
 
-# 구역 개수 세기
+# 적록색약인 사람이 봤을 때의 구역 개수 세기
 for i in range(N):
     for j in range(N):
         if visited[i][j] == 0:
