@@ -17,9 +17,8 @@ def bfs(x, y):
             nx = x + dx[i]
             ny  = y + dy[i]
 
-            if 0 <= nx < I and 0 <= ny < I and not visited[nx][ny]:
+            if 0 <= nx < I and 0 <= ny < I and graph[nx][ny] == 0:
                 queue.append((nx, ny))
-                visited[nx][ny] = True
                 graph[nx][ny] = graph[x][y] + 1
 
 T = int(input()) # 테스트케이스의 개수
@@ -28,7 +27,6 @@ for _ in range(T):
     I = int(input())
 
     graph = [[0]*I for _ in range(I)]
-    visited = [[False]*I for _ in range(I)]
 
     nowX, nowY = map(int, input().split())
     goX, goY = map(int, input().split())

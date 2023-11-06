@@ -59,8 +59,8 @@ for i in range(H-1, 0, -1):
 
 # 장애물 최솟값 찾기
 for i in range(1, H+1):
-    hap = bottom[i]+top[-i]
-    result.append(hap)
+    hap = bottom[i]+top[-i]      
+    result.append(hap)          
     if min_count > hap:
         min_count = hap
 
